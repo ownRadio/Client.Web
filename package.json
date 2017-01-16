@@ -1,0 +1,33 @@
+{
+  "name": "Site",
+  "description": "Site description",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-cheerio": "*",
+    "gulp-combine-mq": "*",
+    "gulp-concat": "*",
+    "gulp-cssfont64": "*",
+    "gulp-fontgen": "*",
+    "gulp-fontmin": "*",
+    "gulp-imagemin": "*",
+    "gulp-inline-base64": "*",
+    "gulp-jade": "*",
+    "gulp-load-plugins": "*",
+    "gulp-minify-css": "*",
+    "gulp-minify-html": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-svg-symbols": "*",
+    "gulp-ttf2woff": "*",
+    "gulp-uglify": "*",
+    "gulp-zip": "*"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
