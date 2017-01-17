@@ -5,7 +5,7 @@ var $ = require('gulp-load-plugins')({rename:{'gulp-combine-mq':'combMQ'}});
 
 //var data = require('./data.json');
 var app = './app/';
-var tmp = './src/assets/';
+var build = './build/assets/';
 
 gulp.task('sass',function(){
     gulp.src(app+'scss/*.scss')
@@ -14,10 +14,10 @@ gulp.task('sass',function(){
         .pipe($.inlineBase64({baseDir:app+'scss/',maxSize:14*1024,debug:false}))
         .pipe($.autoprefixer({browsers:['last 2 versions'],cascade:false}))
         .pipe($.combMQ())
-        .pipe(gulp.dest(tmp+'css'))
+        .pipe(gulp.dest(build+'css'))
         .pipe($.minifyCss())
         .pipe($.rename({suffix:'.min'}))
-        .pipe(gulp.dest(tmp+'css'));
+        .pipe(gulp.dest(build+'css'));
 })
 
 
