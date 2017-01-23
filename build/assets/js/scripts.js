@@ -37,13 +37,14 @@ function loadUid(){
 }
 
 var ownRadioId = loadUid(),
-	api = 'http://api.ownradio.ru/v3',
-	apiNext = api+'/tracks/'+ownRadioId+'/next';
+	api = 'http://api.ownradio.ru/v3';
 
 if(!ownRadioId){
 	ownRadioId = guid();
 	saveUid(ownRadioId);
 }
+
+var apiNext = api+'/tracks/'+ownRadioId+'/next';
 
 console.log('deviceId: '+ownRadioId);
 
@@ -146,7 +147,6 @@ function player(){
 				}
 			},
 			ended:function(){
-				//console.log('ended');
 				prm.ended = true;
 				prm.play = false;
 				fnc.next();
@@ -173,8 +173,8 @@ function player(){
 								fnc.next();
 							}
 						}else{
+							console.log('Ошибка получения данных с сервера.');
 							console.log(xhr);
-							alert('Ошибка получения данных с сервера.');
 						}
 					}
 					xhr.send();
